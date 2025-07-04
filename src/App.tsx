@@ -9,6 +9,7 @@ import {
   Link,
   useLocation,
   useNavigate,
+  HashRouter,
 } from "react-router-dom";
 import About from "./About.tsx";
 
@@ -28,7 +29,7 @@ function ScrollToSection() {
 function App() {
   const [showNav, setShowNav] = React.useState(false);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToSection />
       <div className="h-screen flex flex-col">
         {/* Navbar */}
@@ -194,7 +195,7 @@ function App() {
                                 key={i}
                                 className="px-2 py-1 rounded text-black border text-sm"
                                 style={{ backgroundColor: tech.color,  }}
-                              >
+                              > 
                                 {tech.name}
                               </span>
                             ))}
@@ -356,7 +357,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
