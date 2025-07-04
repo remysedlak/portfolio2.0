@@ -78,6 +78,10 @@ function App() {
             <li>
               <Link to="/about" className="hover:text-gray-400 text-2xl">About</Link>
             </li>
+            <li>
+                <a target="_blank" className="hover:text-gray-400 text-2xl"
+                 href="https://drive.google.com/file/d/1-gW3kevUAv6ImxSWIZgw-VO9A38-KFCk/view">Resume</a>
+              </li>
           </ul>
         </nav>
         <div className="flex-1 overflow-y-auto bg-orange-50" id="home">
