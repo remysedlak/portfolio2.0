@@ -192,8 +192,8 @@ function App() {
                             {project.stack.map((tech, i) => (
                               <span
                                 key={i}
-                                className="px-2 py-1 rounded text-white text-xs"
-                                style={{ backgroundColor: tech.color }}
+                                className="px-2 py-1 rounded text-black border text-sm"
+                                style={{ backgroundColor: tech.color,  }}
                               >
                                 {tech.name}
                               </span>
