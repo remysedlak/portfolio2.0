@@ -22,9 +22,9 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToSection />
-      <div className="bg-orange-50 min-h-screen" id="home">
+      <div className="h-screen flex flex-col">
         {/* Navbar */}
-        <nav className="p-4 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
+        <nav className="overflow-hidden p-2 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
           <h1 className="font-eb-garamond text-3xl text-right ml-auto md:ml-0">Remy Sedlak</h1>
           <ul className="space-x-6  hidden md:flex">
             <li>
@@ -44,18 +44,19 @@ function App() {
             </li>
           </ul>
         </nav>
+        <div className="flex-1 overflow-y-auto bg-orange-50" id="home">
         <Routes>
           <Route
             path="/"
             element={
               <>
                 {/* Hero Section */}
-                <section className=" p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
+                <section className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
                   <h1 className="text-5xl md:text-6xl font-eb-garamond text-white mb-4">Welcome to my portfolio!</h1>
                   <h3 className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">I am Remy, a <b>Computer Science</b> and <b>Interactive Design</b> student<br /> with a love for <b>software development</b> and <b>user experience</b></h3>
                 </section>
                 {/* Projects Section */}
-                <section id="projects" className="py-16 px-4 max-w-4xl mx-auto">
+                <section id="projects" className="py-16 px-4 max-w-4xl mx-auto overflow-auto">
                   <h2 className="text-3xl font-eb-garamond mb-6 text-orange-500">My Projects</h2>
                   <div className="grid gap-8 md:grid-cols-2">
                     {portfolio.map((project, idx) => (
@@ -167,6 +168,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
         </Routes>
+        </div>
       </div>
     </BrowserRouter>
   )
