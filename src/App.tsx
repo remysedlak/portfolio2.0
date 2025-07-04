@@ -44,14 +44,14 @@ function App() {
             </li>
           </ul>
         </nav>
-        <div className="flex-1 overflow-y-auto bg-orange-50" id="home">
+        <div className="flex-1 overflow-y-auto bg-orange-50" >
         <Routes>
           <Route
             path="/"
             element={
               <>
                 {/* Hero Section */}
-                <section className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
+                <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
                   <h1 className="text-5xl md:text-6xl font-eb-garamond text-white mb-4">Welcome to my portfolio!</h1>
                   <h3 className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">I am Remy, a <b>Computer Science</b> and <b>Interactive Design</b> student<br /> with a love for <b>software development</b> and <b>user experience</b></h3>
                 </section>
@@ -96,7 +96,7 @@ function App() {
                   <h2 className="text-3xl font-eb-garamond mb-6 text-orange-500">Timeline</h2>
                   {/* Vertical timeline line */}
     <div className="relative">
-      <div className="absolute  top-0 bottom-0 w-1 bg-orange-300 rounded"></div>
+      <div className="absolute  top-0 bottom-0 w-[0.125rem] bg-orange-300 rounded"></div>
    
     <ul className="flex flex-col gap-10">
       {timeline.map((entry, idx) => (
