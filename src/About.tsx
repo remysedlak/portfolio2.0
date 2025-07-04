@@ -8,7 +8,7 @@ const About: React.FC = () => (
             <img
             src="/assets/remysedlak_image.jpg"
             alt="Remy Sedlak"
-            className="md:rounded-full float-right shadow-lg ml-4 mt-4 w-48 h-48 md:mb-0 md:w-70 md:h-70 border border-orange-900"
+            className="md:rounded-full float-right shadow-lg ml-4 mt-4 w-32 h-32 md:mb-0 md:w-70 md:h-70 border border-orange-900"
         />
         <h1 className="text-3xl mb-4">About me</h1>
             <p className="text-xl mb-2 ">
