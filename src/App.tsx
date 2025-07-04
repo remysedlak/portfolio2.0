@@ -19,12 +19,48 @@ function ScrollToSection() {
 }
 
 function App() {
+  const [showNav, setShowNav] = React.useState(false)
   return (
     <BrowserRouter>
       <ScrollToSection />
-      <div className="h-screen flex flex-col">
+      <div className="bg-orange-50 min-h-screen" id="home">
         {/* Navbar */}
-        <nav className="overflow-hidden p-2 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
+        <nav className="p-4 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
+            <button
+            className="md:hidden p-2"
+            onClick={() => setShowNav((prev) => !prev)}
+            aria-label="Open navigation menu"
+            >
+            <img src="/assets/menu-svgrepo-com(1).svg" className="w-5 h-5" alt="Menu" />
+            </button>
+            {showNav && (
+            <div className="fixed inset-0 bg-orange-800 bg-opacity-60 z-50 flex flex-col">
+              <button
+              className="self-end m-4 p-2"
+              onClick={() => setShowNav(false)}
+              aria-label="Close navigation menu"
+              >
+              <span className="text-white text-3xl">&times;</span>
+              </button>
+              <ul className="flex flex-col items-center justify-center flex-1 space-y-8 text-white text-3xl font-eb-garamond">
+              <li>
+                <Link to="/" state={{ scrollTo: 'home' }} onClick={() => setShowNav(false)}>Home</Link>
+              </li>
+              <li>
+                <Link to="/" state={{ scrollTo: 'projects' }} onClick={() => setShowNav(false)}>Projects</Link>
+              </li>
+              <li>
+                <Link to="/" state={{ scrollTo: 'timeline' }} onClick={() => setShowNav(false)}>Timeline</Link>
+              </li>
+              <li>
+                <Link to="/" state={{ scrollTo: 'links' }} onClick={() => setShowNav(false)}>Links</Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => setShowNav(false)}>About</Link>
+              </li>
+              </ul>
+            </div>
+            )}
           <h1 className="font-eb-garamond text-3xl text-right ml-auto md:ml-0">Remy Sedlak</h1>
           <ul className="space-x-6  hidden md:flex">
             <li>
@@ -44,19 +80,18 @@ function App() {
             </li>
           </ul>
         </nav>
-        <div className="flex-1 overflow-y-auto bg-orange-50" >
         <Routes>
           <Route
             path="/"
             element={
               <>
                 {/* Hero Section */}
-                <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
+                <section className=" p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
                   <h1 className="text-5xl md:text-6xl font-eb-garamond text-white mb-4">Welcome to my portfolio!</h1>
                   <h3 className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">I am Remy, a <b>Computer Science</b> and <b>Interactive Design</b> student<br /> with a love for <b>software development</b> and <b>user experience</b></h3>
                 </section>
                 {/* Projects Section */}
-                <section id="projects" className="py-16 px-4 max-w-4xl mx-auto overflow-auto">
+                <section id="projects" className="py-16 px-4 max-w-4xl mx-auto">
                   <h2 className="text-3xl font-eb-garamond mb-6 text-orange-500">My Projects</h2>
                   <div className="grid gap-8 md:grid-cols-2">
                     {portfolio.map((project, idx) => (
@@ -96,7 +131,7 @@ function App() {
                   <h2 className="text-3xl font-eb-garamond mb-6 text-orange-500">Timeline</h2>
                   {/* Vertical timeline line */}
     <div className="relative">
-      <div className="absolute  top-0 bottom-0 w-[0.125rem] bg-orange-300 rounded"></div>
+      <div className="absolute  top-0 bottom-0 w-1 bg-orange-300 rounded"></div>
    
     <ul className="flex flex-col gap-10">
       {timeline.map((entry, idx) => (
@@ -168,7 +203,6 @@ function App() {
           />
           <Route path="/about" element={<About />} />
         </Routes>
-        </div>
       </div>
     </BrowserRouter>
   )

@@ -2,12 +2,12 @@ import React from "react";
 
 const About: React.FC = () => (
     <div
-        className="mx-40 flex flex-row justify-center items-center mt-20"
+        className="md:mx-40 mx-10 flex flex-col md:flex-row justify-center items-center mt-20"
     >
         <img
             src="/assets/remysedlak_image.jpg"
             alt="Remy Sedlak"
-            className="rounded-full shadow-lg mr-20 w-70 h-70 border border-orange-900"
+            className="md:rounded-full shadow-lg md:mr-20 w-64 h-64 mb-10 md:mb-0 md:w-70 md:h-70 border border-orange-900"
         />
         <div style={{ flex: 1, minWidth: 250 }} className="bg-orange-100 p-2 border border-orange-900">
             <p className="text-xl mb-4 ">
