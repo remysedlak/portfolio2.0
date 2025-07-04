@@ -25,7 +25,7 @@ function App() {
       <ScrollToSection />
       <div className='h-screen flex flex-col'>
         {/* Navbar */}
-        <nav className="overflow-visible p-4 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
+        <nav className="overflow-hidden overflow-y-hidden p-4 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
             <button
             className="md:hidden p-2"
             onClick={() => setShowNav((prev) => !prev)}
