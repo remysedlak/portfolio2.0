@@ -88,7 +88,7 @@ function App() {
                 {/* Hero Section */}
                 <section className=" p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
                   <h1 className="text-5xl md:text-6xl font-eb-garamond text-white mb-4">Welcome to my portfolio!</h1>
-                  <h3 className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">I am Remy, a <b>Computer Science</b> and <b>Interactive Design</b> student<br /> with a love for <b>software development</b> and <b>user experience</b></h3>
+                  <h3 className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">I am Remy, a <b>Computer Science</b> and <b>Interactive Design</b> student<br /> with a love for <b>software development</b> and <b>user experience.</b></h3>
                 </section>
                 {/* Projects Section */}
                 <section id="projects" className="py-16 px-4 max-w-4xl mx-auto">
