@@ -23,9 +23,9 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToSection />
-      <div className="bg-orange-50 min-h-screen" id="home">
+      <div className='h-screen flex flex-col'>
         {/* Navbar */}
-        <nav className="p-4 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
+        <nav className="overflow-visible p-4 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
             <button
             className="md:hidden p-2"
             onClick={() => setShowNav((prev) => !prev)}
@@ -80,12 +80,14 @@ function App() {
             </li>
           </ul>
         </nav>
+        <div className="flex-1 overflow-y-auto bg-orange-50" id="home">
         <Routes>
           <Route
             path="/"
             element={
               <>
                 {/* Hero Section */}
+                
                 <section className=" p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
                   <h1 className="text-5xl md:text-6xl font-eb-garamond text-white mb-4">Welcome to my portfolio!</h1>
                   <h3 className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">I am Remy, a <b>Computer Science</b> and <b>Interactive Design</b> student<br /> with a love for <b>software development</b> and <b>user experience.</b></h3>
@@ -203,6 +205,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
         </Routes>
+      </div>
       </div>
     </BrowserRouter>
   )
