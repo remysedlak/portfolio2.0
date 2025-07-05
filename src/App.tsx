@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import "./index.css";
 import portfolio from "./data/portfolio.ts";
 import timeline from "./data/timeline.ts";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+
 import {
   Routes,
   Route,
@@ -26,6 +29,12 @@ function ScrollToSection() {
 
 function App() {
   const [showNav, setShowNav] = React.useState(false);
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      once: true,    // whether animation should happen only once
+    });
+  }, []);
   return (
     <HashRouter>
       <ScrollToSection />
@@ -154,10 +163,10 @@ function App() {
                   {/* Hero Section */}
 
                   <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
-                    <h1 className="text-5xl transition-opacity duration-300 ease-in-out md:text-6xl font-eb-garamond text-white mb-4">
+                    <h1 data-aos="zoom-in-down" data-aos-duration="800" className="text-5xl transition-opacity duration-300 ease-in-out md:text-6xl font-eb-garamond text-white mb-4">
                       Welcome to my portfolio!
                     </h1>
-                    <h3 className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">
+                    <h3 data-aos="zoom-in-down"  data-aos-duration="800" className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">
                       I am Remy, a <b>Computer Science</b> and{" "}
                       <b>Interactive Design</b> student
                       <br /> with a love for <b>
