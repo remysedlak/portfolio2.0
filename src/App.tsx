@@ -198,7 +198,7 @@ function App() {
                               </span>
                             ))}
                           </div>
-                          <p className="mb-4 text-gray-700">{project.desc}</p>
+                          <p className="mb-4 text-gray-700 text-lg">{project.desc}</p>
                           <a
                             href={project.link}
                             target="_blank"
@@ -241,7 +241,7 @@ function App() {
                                 </span>
                               </div>
                               <div
-                                className="mt-2 text-gray-700"
+                                className="mt-2 text-gray-700 text-lg"
                                 dangerouslySetInnerHTML={{
                                   __html: entry.details,
                                 }}
