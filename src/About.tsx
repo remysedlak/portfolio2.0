@@ -20,9 +20,9 @@ const About: React.FC = () => (
             <p className="mb-2 text-xl">
                 I have a deep fascination with systems—how things work, how they connect, and how they can be improved. This curiosity drives me to explore scripting and automation, making workflows smoother and more efficient.
             </p>
-            <p className="mt-4 text-md  text-red-700">
+            {/* <p className="mt-4 text-md  text-red-700">
                 Thanks for stopping by and learning a bit about me!
-            </p>
+            </p> */}
             
         </div>
     </div>
