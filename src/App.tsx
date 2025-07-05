@@ -337,7 +337,7 @@ function App() {
                               This website was developed by me <br />
                               with{" "}
                               <img
-                                className="inline w-6 h-6 align-middle mx-1"
+                                className="inline w-6 h-6 align-middle mx-1 "
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                                 alt="TypeScript"
                               />{" "}
