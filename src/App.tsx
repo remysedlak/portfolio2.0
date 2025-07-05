@@ -332,7 +332,7 @@ function App() {
                           </ul>
                         </div>
                         <div className="hidden  mt-auto md:ml-12 md:flex items-center justify-end mr-20">
-                          <span className="text-orange-700 font-eb-garamond text-xl flex items-center gap-2">
+                          <span className="text-green-700 font-eb-garamond text-xl flex items-center gap-2">
                             <span>
                               This website was developed by me <br />
                               with{" "}
