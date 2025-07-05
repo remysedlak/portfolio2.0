@@ -3,12 +3,10 @@ import "./index.css";
 import portfolio from "./data/portfolio.ts";
 import timeline from "./data/timeline.ts";
 import {
-  BrowserRouter,
   Routes,
   Route,
   Link,
   useLocation,
-  useNavigate,
   HashRouter,
 } from "react-router-dom";
 import About from "./About.tsx";
@@ -33,7 +31,7 @@ function App() {
       <ScrollToSection />
       <div className="h-screen flex flex-col">
         {/* Navbar */}
-        <nav className="overflow-hidden overflow-y-hidden p-4 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
+        <nav className="overflow-hidden overflow-y-hidden p-2 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
           <button
             className="md:hidden p-2"
             onClick={() => setShowNav((prev) => !prev)}
