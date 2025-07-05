@@ -56,7 +56,7 @@ function App() {
       <ScrollToSection />
       <div className="h-[100dvh] flex flex-col">
         {/* Navbar */}
-        <nav className="overflow-hidden overflow-y-hidden p-2 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
+        <nav className="overflow-hidden overflow-y-hidden p-2 bg-red-700 text-white flex items-center justify-between sticky top-0 z-50">
           <button
             className="md:hidden p-2"
             onClick={() => setShowNav((prev) => !prev)}
@@ -287,7 +287,7 @@ function App() {
                   </section>
 
                   {/* Links Section */}
-                  <section id="links" className="py-8 px-4 bg-yellow-100">
+                  <section id="links" className="py-8 px-4 bg-yellow-100 relative">
                     <div className="md:ml-32 ml-8">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div>
@@ -364,23 +364,21 @@ function App() {
             </li>
                           </ul>
                         </div>
-                        <div className="hidden  mt-auto md:ml-12 md:flex items-center justify-end mr-20">
-                          <span className="text-green-700 opacity-80 font-eb-garamond text-xl flex items-center gap-2">
-                            <span>
-                              This website was developed by me <br />
-                              with{" "}
-                              <img
-                                className="inline w-6 h-6 align-middle mx-1 "
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                                alt="TypeScript"
-                              />{" "}
-                              TypeScript and caffiene.☕
-                            </span>
-                          </span>
-                        </div>
+                        
+                        
                       </div>
+                      
                     </div>
+                    
+                     <footer className=" text-center absolute mt-8 opacity-50 bottom-0 inset-x-0 mb-1">
+  <p className="text-sm text-orange-900 font-eb-garamond items-center">
+    &copy; {new Date().getFullYear()} Remy Sedlak. All rights reserved. Built with TypeScript — and a lot of caffeine ☕.
+  </p>
+</footer>
                   </section>
+                 
+
+
                 </>
               }
             />
