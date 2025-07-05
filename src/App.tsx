@@ -202,7 +202,7 @@ function App() {
                           <div className="flex flex-wrap ml-2 gap-x-2">
                             {project.stack.map((tech, i) => (
                               
-                                <StackIcon className="w-5 h-5 md:w-6 md:h-6" name={tech.name}/>
+                                <StackIcon className="w-6 h-6" name={tech.name}/>
                             ))}
                           </div>
                           </div>
