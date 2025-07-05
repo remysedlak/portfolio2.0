@@ -10,8 +10,8 @@ const modifyLinks = (htmlString: string) => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(htmlString, 'text/html');
       doc.querySelectorAll('a').forEach((a) => {
-         a.classList.add("text-blue-900");
-         a.classList.add("hover:text-blue-600");
+         a.classList.add("text-blue-700");
+         a.classList.add("hover:text-blue-500");
          a.classList.add("underline");
       });
       return doc.body.innerHTML;
