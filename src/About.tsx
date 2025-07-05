@@ -2,7 +2,7 @@ import React from "react";
 
 const About: React.FC = () => (
     <div
-        className="md:mx-40 mx-2 flex flex-col md:flex-row justify-center items-center mt-16"
+        className="md:mx-40 mx-2 flex flex-col md:flex-row justify-center items-center md:mt-16 mt-4"
     >
         <div style={{ flex: 1, minWidth: 250 }} className=" p-2 ">
             <img
