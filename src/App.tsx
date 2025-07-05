@@ -217,7 +217,15 @@ function App() {
                           <div className="flex flex-wrap ml-2 gap-x-2">
                             {project.stack.map((tech, i) => (
                               
-                                <StackIcon className="w-6 h-6" name={tech.name}/>
+                                <a
+                                  title={tech.name}
+                                  href={tech.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="group"
+                                >
+                                  <StackIcon className="w-6 h-6 transition-transform duration-200 group-hover:scale-110 group-hover:drop-shadow" name={tech.name} />
+                                </a>
                             ))}
                           </div>
                           </div>
@@ -225,7 +233,7 @@ function App() {
                                   __html: modifyLinks(project.desc),
                                 }}></p>
                           <a
-                            href={project.link}
+                            href={project.repository}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-auto text-orange-600 hover:underline"
