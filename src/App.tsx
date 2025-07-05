@@ -4,6 +4,7 @@ import portfolio from "./data/portfolio.ts";
 import timeline from "./data/timeline.ts";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import StackIcon from "tech-stack-icons";
 
 import {
   Routes,
@@ -13,7 +14,7 @@ import {
   HashRouter,
 } from "react-router-dom";
 import About from "./About.tsx";
-
+import "tech-stack-icons";
 function ScrollToSection() {
   const location = useLocation();
   useEffect(() => {
@@ -172,6 +173,7 @@ function App() {
                       <br /> with a love for <b>
                         software development
                       </b> and <b>user experience.</b>
+                      
                     </h3>
                   </section>
                   {/* Projects Section */}
@@ -193,19 +195,16 @@ function App() {
                             alt={project.title}
                             className="w-full h-48 object-cover rounded mb-4 border"
                           />
-                          <h3 className="text-2xl font-eb-garamond mb-2">
+                          <div className="flex flex-row items-center">
+                          <h3 className="text-2xl font-eb-garamond">
                             {project.title}
                           </h3>
-                          <div className="flex flex-wrap gap-2 mb-2">
+                          <div className="flex flex-wrap ml-2 gap-x-2">
                             {project.stack.map((tech, i) => (
-                              <span
-                                key={i}
-                                className="px-2 py-1 rounded text-black border text-sm"
-                                style={{ backgroundColor: tech.color,  }}
-                              > 
-                                {tech.name}
-                              </span>
+                              
+                                <StackIcon className="w-5 h-5 md:w-6 md:h-6" name={tech.name}/>
                             ))}
+                          </div>
                           </div>
                           <p className="mb-4 text-gray-700 text-lg">{project.desc}</p>
                           <a
