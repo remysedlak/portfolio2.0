@@ -39,13 +39,13 @@ const timeline = [
         year: '2023',
         title: 'Undergrad @ Pitt',
         duration: '4 years',
-        details: `Pursuing a B.S. in Computer Science and Psychology at the <a target="_blank" href="https://www.pitt.edu/">University of Pittsburgh</a>, with a focus on the intersection of technology and human behavior.
+        details: `Pursuing a B.S. in Computer Science and Digital Narrative and Interacitve Design at the <a target="_blank" href="https://www.pitt.edu/">University of Pittsburgh</a>, with a focus on the intersection of technology and human behavior.
         Applying interdisciplinary knowledge to real-world projects in AI, UX design, and music technology.`
     },
     {
         year: '2022',
-        title: 'Working @ NAPA',
-        duration: '1.5 years',
+        title: 'Warehousing',
+        duration: '2 years',
         details: `Worked as a warehouse associate at <a target="_blank" href="https://www.fayettepartsservice.com/">Fayette Service Parts Inc.</a>, managing inventory for over 25+ NAPA automotive stores.
         Gained experience in logistics, supply chain operations, and data tracking, ensuring accurate inventory management in a high-demand environment.
         Developed strong problem-solving skills by troubleshooting logistical challenges and optimizing warehouse efficiency.`
