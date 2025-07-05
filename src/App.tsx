@@ -230,7 +230,7 @@ function App() {
                             <span className="absolute -left-1.75 mt-2 w-4 h-4 bg-orange-100 rounded-full border-2 border-black shadow"></span>
                             <div className="ml-6 bg-white rounded-lg p-4 shadow-md">
                               <div className="flex items-baseline gap-4 border-b ">
-                                <span className="text-lg font-semibold text-yellow-800">
+                                <span className="text-lg font-semibold text-gray-600">
                                   {entry.year}
                                 </span>
                                 <span className="text-xl font-eb-garamond font-semibold  ">
@@ -332,7 +332,7 @@ function App() {
                           </ul>
                         </div>
                         <div className="hidden  mt-auto md:ml-12 md:flex items-center justify-end mr-20">
-                          <span className="text-green-700 font-eb-garamond text-xl flex items-center gap-2">
+                          <span className="text-blue-700 font-eb-garamond text-xl flex items-center gap-2">
                             <span>
                               This website was developed by me <br />
                               with{" "}
