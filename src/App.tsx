@@ -6,6 +6,17 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import StackIcon from "tech-stack-icons";
 
+const modifyLinks = (htmlString: string) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlString, 'text/html');
+      doc.querySelectorAll('a').forEach((a) => {
+         a.classList.add("text-blue-900");
+         a.classList.add("hover:text-blue-600");
+         a.classList.add("underline");
+      });
+      return doc.body.innerHTML;
+   };
+   
 import {
   Routes,
   Route,
@@ -251,7 +262,7 @@ function App() {
                               <div
                                 className="mt-2 text-gray-700 text-lg"
                                 dangerouslySetInnerHTML={{
-                                  __html: entry.details,
+                                  __html: modifyLinks(entry.details),
                                 }}
                               />
                             </div>

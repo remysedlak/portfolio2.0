@@ -31,7 +31,7 @@ const timeline = [
         year: '2024',
         title: 'Intern @ AGI',
         duration: '2 months',
-        details: `Secured my first technical internship at <a target="_blank" className="underline text-blue-400" href="https://agigrouponline.com/"> AssetGenie</a>, where I built Python automation tools integrated with GitLab and Excel to streamline data processing workflows. 
+        details: `Secured my first technical internship at <a target="_blank" className="underline text-blue-400" href="https://agigrouponline.com/"> AssetGenie Inc.</a>, where I built Python automation tools integrated with GitLab and Excel to streamline data processing workflows. 
         Gained hands-on experience in data engineering, scripting, and backend development, enhancing operational efficiency across teams. 
         Worked in a fast-paced environment, collaborating with engineers to optimize automation processes and improve internal data management systems.`
     },
@@ -52,7 +52,7 @@ const timeline = [
     },
     {
         year: '2021',
-        title: 'Hello World',
+        title: 'Hello World!',
         duration: '9 months',
         details: `Took my first programming course through a <a target="_blank" href="https://www.chs.pitt.edu/">College in High School (CHS)</a> program, sparking my passion for software development.
         Started with fundamental programming concepts and quickly became fascinated with problem-solving, leading to deeper explorations in AI, full-stack development, and data science.
