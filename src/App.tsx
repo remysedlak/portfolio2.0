@@ -153,7 +153,7 @@ function App() {
                 <>
                   {/* Hero Section */}
 
-                  <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
+                  <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60dvh] bg-orange-400">
                     <h1 className="text-5xl transition-opacity duration-300 ease-in-out md:text-6xl font-eb-garamond text-white mb-4">
                       Welcome to my portfolio!
                     </h1>
