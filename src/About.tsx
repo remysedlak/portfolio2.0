@@ -2,9 +2,9 @@ import React from "react";
 
 const About: React.FC = () => (
     <div
-        className="md:mx-30 mx-2 flex flex-col md:flex-row justify-center items-center md:mt-16 mt-4"
+        className="md:mx-25 mx-2 flex flex-col md:flex-row justify-center items-center md:mt-16 mt-4"
     >
-        <div style={{ flex: 1, minWidth: 250 }} className=" p-2 bg-yellow-50 rounded-xl shadow-lg border ">
+        <div style={{ flex: 1, minWidth: 250 }} className=" p-2 md:p-4 bg-yellow-50 rounded-xl shadow-lg border ">
             <img
             src="/assets/remysedlak_image.jpg"
             alt="image of Remy Sedlak"
