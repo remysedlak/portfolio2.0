@@ -370,8 +370,8 @@ function App() {
                       
                     </div>
                     
-                     <footer className=" text-center absolute mt-8 opacity-50 bottom-0 inset-x-0 mb-1">
-  <p className="text-sm text-orange-900 font-eb-garamond items-center">
+                     <footer className=" text-center mt-8 opacity-50">
+  <p className="hidden md:flex md:justify-center text-sm text-orange-900 font-eb-garamond items-center">
     &copy; {new Date().getFullYear()} Remy Sedlak. All rights reserved. Built with TypeScript — and a lot of caffeine ☕.
   </p>
 </footer>
