@@ -29,7 +29,7 @@ function App() {
   return (
     <HashRouter>
       <ScrollToSection />
-      <div className="h-screen flex flex-col">
+      <div className="h-[100dvh] flex flex-col">
         {/* Navbar */}
         <nav className="overflow-hidden overflow-y-hidden p-2 bg-red-800 text-white flex items-center justify-between sticky top-0 z-50">
           <button
