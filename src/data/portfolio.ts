@@ -54,7 +54,7 @@ const portfolio = [
         stack: [
             { name: 'react', color: '#B3ECFF' },         // Light cyan
             { name: 'vitejs', color: '#D6D6FF' },          // Light violet
-            { name: 'JavaScript', color: '#FFF9B2' },    // Light yellow
+            { name: 'js', color: '#FFF9B2' },    // Light yellow
             { name: 'tailwindcss', color: '#B2F5EA' }       // Light teal
         ],
         link:'https://github.com/remysedlak/tailwind-journal',
