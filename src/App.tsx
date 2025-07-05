@@ -287,7 +287,7 @@ function App() {
                   </section>
 
                   {/* Links Section */}
-                  <section id="links" className="py-8 px-4 bg-yellow-100 relative">
+                  <section id="links" className="py-8 md:pt-8 md:pb-2 px-4 bg-yellow-100 relative">
                     <div className="md:ml-32 ml-8">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div>
