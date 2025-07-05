@@ -221,7 +221,9 @@ function App() {
                             ))}
                           </div>
                           </div>
-                          <p className="mb-4 text-gray-700 text-lg">{project.desc}</p>
+                          <p className="mb-4 text-gray-700 text-lg" dangerouslySetInnerHTML={{
+                                  __html: modifyLinks(project.desc),
+                                }}></p>
                           <a
                             href={project.link}
                             target="_blank"
