@@ -44,16 +44,13 @@ const portfolio = [
         desc: 'This js app is designed for <b>music producers</b> to evaluate infromation from <b>samples</b>. Currently developing a reliable browser-side spectrogram algorithm.'
     },
     {
-        imgUrl: 'assets/journallogger.jpg',
-        title: 'journalLogger',
+        imgUrl: 'assets/clipvault.png',
+        title: 'ClipVault',
         stack: [
-            { name: 'react', color: '#B3ECFF', link: 'https://react.dev/' },
-            { name: 'vitejs', color: '#D6D6FF', link: 'https://vitejs.dev/' },
-            { name: 'js', color: '#FFF9B2', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-            { name: 'tailwindcss', color: '#B2F5EA', link: 'https://tailwindcss.com/' },
+            { name: 'rust', color: '#B3ECFF', link: 'https://react.dev/' },
         ],
        repository:'https://github.com/remysedlak/tailwind-journal',
-        desc: 'This webapp records basic <b>journal entries</b>. It works <b>offline</b> and allows quick lookup to the browser\'s cache. Implemented a landing page for new users.'
+        desc: 'ClipVault is a <b>lightweight</b>, <b>privacy-focused</b> clipboard manager built in <b>Rust</b> with a native GUI using <b>egui</b> and <b>system tray integration</b>.'
     },
     {
         imgUrl: 'assets/plant-mob.png',
