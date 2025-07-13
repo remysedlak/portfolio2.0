@@ -47,7 +47,7 @@ const portfolio = [
         imgUrl: 'assets/clipvault.png',
         title: 'ClipVault',
         stack: [
-            { name: 'rust', color: '#B3ECFF', link: 'https://react.dev/' },
+            { name: 'rust', color: '#B3ECFF', link: 'https://www.rust-lang.org/' },
         ],
        repository:'https://github.com/remysedlak/clipvault',
         desc: 'ClipVault is a <b>lightweight</b>, <b>privacy-focused</b> clipboard manager built in <b>Rust</b> with a native GUI using <b>egui</b> and <b>system tray integration</b>.'
