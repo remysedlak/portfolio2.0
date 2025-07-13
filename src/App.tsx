@@ -225,6 +225,9 @@ function App() {
                                   className="group"
                                 >
                                   <StackIcon className="w-6 h-6 transition-transform duration-200 group-hover:scale-110 group-hover:drop-shadow" name={tech.name} />
+                                  {tech.name === 'sqlite' && (
+                                    <img src="assets/Sqlite-square-icon.svg" alt="sqlite" className="w-6 h-6 transition-transform duration-200 group-hover:scale-110 group-hover:drop-shadow" />
+                                  )}
                                 </a>
                             ))}
                           </div>
