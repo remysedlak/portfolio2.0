@@ -49,7 +49,7 @@ const portfolio = [
         stack: [
             { name: 'rust', color: '#B3ECFF', link: 'https://react.dev/' },
         ],
-       repository:'https://github.com/remysedlak/tailwind-journal',
+       repository:'https://github.com/remysedlak/clipvault',
         desc: 'ClipVault is a <b>lightweight</b>, <b>privacy-focused</b> clipboard manager built in <b>Rust</b> with a native GUI using <b>egui</b> and <b>system tray integration</b>.'
     },
     {
