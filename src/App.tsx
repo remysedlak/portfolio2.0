@@ -203,7 +203,7 @@ function App() {
                       {portfolio.map((project, idx) => (
                         <div
                           key={idx}
-                          className="bg-white rounded-lg shadow p-6 flex flex-col"
+                          className="bg-white rounded-lg shadow-lg p-6 flex flex-col"
                         >
                           <img
                             src={project.imgUrl}
@@ -264,7 +264,7 @@ function App() {
                           <li key={idx} className="relative flex items-start ">
                             {/* Dot */}
                             <span className="absolute -left-1.75 mt-2 w-4 h-4 bg-orange-100 rounded-full border-2 border-black shadow"></span>
-                            <div className="ml-6 bg-white rounded-lg p-4 shadow-md">
+                            <div className="ml-6 bg-white rounded-lg p-4 shadow-lg">
                               <div className="flex items-baseline gap-4 border-b ">
                                 <span className="text-lg font-semibold text-gray-600">
                                   {entry.year}
