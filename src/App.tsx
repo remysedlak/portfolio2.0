@@ -294,16 +294,16 @@ function App() {
                     <div className="md:ml-32 ml-8">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div>
-                          <h2 className="text-3xl font-eb-garamond mb-6 text-orange-600">
+                          <h2 className="text-3xl font-eb-garamond mb-6 text-orange-800">
                             Links
                           </h2>
-                          <ul className="space-y-4 text-lg">
+                          <ul className="space-y-2 text-lg text-orange-800">
                             <li>
                               <a
                                 href="https://github.com/remysedlak"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-orange-600 hover:underline  flex items-center gap-2"
+                                className="hover:underline  flex items-center gap-2"
                               >
                                 <svg
                                   className="w-5 h-5"
@@ -321,7 +321,7 @@ function App() {
                                 href="https://linkedin.com/in/remysedlak"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-orange-600 hover:underline flex items-center gap-2"
+                                className="text-orange-800 hover:underline flex items-center gap-2"
                               >
                                 <svg
                                   className="w-5 h-5"
@@ -336,7 +336,7 @@ function App() {
                             <li>
                               <a
                                 href="mailto:remysedlak@gmail.com"
-                                className="text-orange-600 hover:underline flex items-center gap-2"
+                                className="hover:underline flex items-center gap-2"
                               >
                                 <svg
                                   className="w-5 h-5"
@@ -350,19 +350,19 @@ function App() {
                             </li>
                             <li>
                 <a
-                href="https://drive.google.com/file/d/1-gW3kevUAv6ImxSWIZgw-VO9A38-KFCk/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-600 hover:underline flex items-center gap-2"
+                  href="https://drive.google.com/file/d/1-gW3kevUAv6ImxSWIZgw-VO9A38-KFCk/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline flex items-center gap-2"
                 >
-                <svg
-                  className="w-5 h-5"
+                  <svg
+                  className="w-5 h-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                >
-                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828A2 2 0 0 0 19.414 7.414l-4.828-4.828A2 2 0 0 0 12.172 2H6zm6 1.414L18.586 10H14a2 2 0 0 1-2-2V3.414zM6 4h6v4a4 4 0 0 0 4 4h4v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4zm2 10h8v2H8v-2z" />
-                
-                </svg>Resume
+                  >
+                  <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828a2 2 0 0 0-.586-1.414l-5.828-5.828A2 2 0 0 0 12.172 2H6zm0 2h6v5a1 1 0 0 0 1 1h5v10H6V4zm8 0.414L18.586 9H14V4.414zM8 12h8v2H8v-2zm0 4h8v2H8v-2z" />
+                  </svg>
+                  Resume
                 </a>
             </li>
                           </ul>
@@ -373,7 +373,7 @@ function App() {
                       
                     </div>
                     
-                     <footer className=" text-center mt-8 opacity-50">
+                     <footer className=" text-center mt-4 opacity-50">
   <p className="hidden md:flex md:justify-center text-sm text-orange-900 font-eb-garamond items-center">
     &copy; {new Date().getFullYear()} Remy Sedlak. All rights reserved. Built with TypeScript — and a lot of caffeine ☕.
   </p>
