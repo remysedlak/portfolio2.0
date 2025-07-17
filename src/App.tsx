@@ -179,7 +179,7 @@ function App() {
                   {/* Hero Section */}
 
                   <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
-                    <h1 data-aos="zoom-in-down" data-aos-duration="800" className="text-5xl transition-opacity duration-300 ease-in-out md:text-6xl font-eb-garamond text-white mb-4">
+                    <h1 data-aos="zoom-in-down" data-aos-duration="800" className="text-5xl transition-opacity duration-300 ease-in-out md:text-7xl font-eb-garamond text-white mb-4">
                       Welcome to my portfolio!
                     </h1>
                     <h3 data-aos="zoom-in-down"  data-aos-duration="800" className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">
