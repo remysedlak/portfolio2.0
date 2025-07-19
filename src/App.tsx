@@ -180,10 +180,10 @@ function App() {
                   {/* Hero Section */}
 
                   <section id="home" className="p-2  px-4 flex flex-col md:items-center  justify-center h-[60vh] bg-slate-800">
-                    <h1 data-aos="zoom-in-down" data-aos-duration="600" className=" text-5xl transition-opacity duration-300 ease-in-out md:text-5xl lg:text-6xl xl:text-7xl font-eb-garamond text-white mb-4">
+                    <h1 data-aos="zoom-in-down" data-aos-duration="400" className=" text-5xl transition-opacity duration-300 ease-in-out md:text-5xl lg:text-6xl xl:text-7xl font-eb-garamond text-white mb-4">
                       Welcome to my portfolio!
                     </h1>
-                    <h3 data-aos="zoom-in-down"  data-aos-duration="600" className="text-2xl font-eb-garamond text-slate-100  mb-4 text-left md:text-center">
+                    <h3 data-aos="zoom-in-down"  data-aos-duration="400" className="text-2xl font-eb-garamond text-slate-100  mb-4 text-left md:text-center">
                       I am Remy, a <b>Computer Science</b> and{" "}
                       <b>Interactive Design</b> student
                       <br /> with a love for <b>
