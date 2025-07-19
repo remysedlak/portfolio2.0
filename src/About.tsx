@@ -29,21 +29,27 @@ const About: React.FC = () => {
             <h1 className="text-3xl  font-eb-garamond mb-4 text-slate-950 text-center">
                 So, who am I?
             </h1>
-            <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl">
+            <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl items-center">
                 {/* Images */}
-                <div className="hidden md:block flex flex-col items-center md:w-1/3">
-                    <img
-                        src="/assets/remysedlak_image.jpg"
-                        alt="image of Remy Sedlak"
-                        loading="lazy"
-                        className="rounded-xl shadow-xl border m-4 w-32 h-32 md:w-48 md:h-48 object-cover transition-transform duration-300 hover:scale-105"
-                    />
-                    <img
-                        src="/assets/IMG_2927.png"
-                        alt="image of Remy's cat, Church"
-                        loading="lazy"
-                        className="rounded-xl shadow-xl border m-4 w-32 h-32 md:w-50 md:h-40 object-cover transition-transform duration-300 hover:scale-105"
-                    />
+                <div className="flex flex-row md:flex-col items-center md:w-1/3 gap-y-3 gap-x-8">
+                    <div className="flex flex-col items-center">
+                        <img
+                            src="/assets/remysedlak_image.jpg"
+                            alt="image of Remy Sedlak"
+                            loading="lazy"
+                            className="rounded-xl shadow-xl border w-42 h-40 md:w-48 md:h-42 object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                        <span className="text-sm text-slate-600 mt-1">Portrait from AEO</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img
+                            src="/assets/IMG_2927.png"
+                            alt="image of Remy's cat, Church"
+                            loading="lazy"
+                            className="rounded-xl shadow-xl border w-42 h-40 md:w-50 md:h-40 object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                        <span className="text-sm text-slate-600 mt-1">Church's Merge Request</span>
+                    </div>
                 </div>
                 {/* Interactive Facts */}
                 <div className="flex-1 flex flex-col items-center">
