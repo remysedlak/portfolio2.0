@@ -56,7 +56,7 @@ function App() {
       <ScrollToSection />
       <div className="h-[100dvh] flex flex-col">
         {/* Navbar */}
-        <nav className="overflow-hidden overflow-y-hidden p-2 bg-red-700 text-white flex items-center justify-between sticky top-0 z-50">
+        <nav className="overflow-hidden overflow-y-hidden p-2 bg-slate-900 text-slate-100 flex items-center justify-between sticky top-0 z-50">
           <button
             className="md:hidden p-2"
             onClick={() => setShowNav((prev) => !prev)}
@@ -69,7 +69,7 @@ function App() {
             />
           </button>
           {showNav && (
-            <div className="fixed inset-0 bg-orange-800 bg-opacity-60 z-50 flex flex-col">
+            <div className="fixed inset-0 bg-slate-800 bg-opacity-60 z-50 flex flex-col">
               <button
                 className="self-end m-4 p-2"
                 onClick={() => setShowNav(false)}
@@ -80,6 +80,7 @@ function App() {
               <ul className="flex flex-col items-center justify-center flex-1 space-y-8 text-white text-3xl font-eb-garamond">
                 <li>
                   <Link
+                  className="hover:unerline"
                     to="/"
                     state={{ scrollTo: "home" }}
                     onClick={() => setShowNav(false)}
@@ -170,7 +171,7 @@ function App() {
             
           </ul>
         </nav>
-        <div className="flex-1 overflow-y-auto bg-orange-100" >
+        <div className="flex-1 overflow-y-auto 	bg-slate-200" >
           <Routes>
             <Route
               path="/"
@@ -178,11 +179,11 @@ function App() {
                 <>
                   {/* Hero Section */}
 
-                  <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-orange-400">
-                    <h1 data-aos="zoom-in-down" data-aos-duration="800" className="text-5xl transition-opacity duration-300 ease-in-out md:text-7xl font-eb-garamond text-white mb-4">
+                  <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-slate-800">
+                    <h1 data-aos="zoom-in-down" data-aos-duration="600" className="text-5xl transition-opacity duration-300 ease-in-out md:text-7xl font-eb-garamond text-white mb-4">
                       Welcome to my portfolio!
                     </h1>
-                    <h3 data-aos="zoom-in-down"  data-aos-duration="800" className="text-2xl font-eb-garamond text-white mb-4 text-left md:text-center">
+                    <h3 data-aos="zoom-in-down"  data-aos-duration="600" className="text-2xl font-eb-garamond text-slate-100  mb-4 text-left md:text-center">
                       I am Remy, a <b>Computer Science</b> and{" "}
                       <b>Interactive Design</b> student
                       <br /> with a love for <b>
@@ -196,7 +197,7 @@ function App() {
                     id="projects"
                     className="py-16 px-4 max-w-4xl mx-auto "
                   >
-                    <h2 className="text-3xl font-eb-garamond mb-6 text-orange-600">
+                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-900">
                       My Projects
                     </h2>
                     <div className="grid gap-8 md:grid-cols-2">
@@ -252,7 +253,7 @@ function App() {
                     id="timeline"
                     className="py-16 px-8 max-w-4xl mx-auto"
                   >
-                    <h2 className="text-3xl font-eb-garamond mb-6 text-orange-600">
+                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-900">
                       Timeline
                     </h2>
                     {/* Vertical timeline line */}
@@ -263,7 +264,7 @@ function App() {
                         {timeline.map((entry, idx) => (
                           <li key={idx} className="relative flex items-start ">
                             {/* Dot */}
-                            <span className="absolute -left-1.75 mt-2 w-4 h-4 bg-orange-100 rounded-full border-2 border-black shadow"></span>
+                            <span className="absolute -left-1.75 mt-2 w-4 h-4 bg-slate-100 rounded-full border-2 border-black shadow"></span>
                             <div className="ml-6 bg-white rounded-lg p-4 shadow-lg">
                               <div className="flex items-baseline gap-4 border-b ">
                                 <span className="text-lg font-semibold text-gray-600">
@@ -294,10 +295,10 @@ function App() {
                     <div className="md:ml-32 ml-8">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div>
-                          <h2 className="text-3xl font-eb-garamond mb-6 text-orange-800">
+                          <h2 className="text-3xl font-eb-garamond mb-6 text-zinc-900">
                             Links
                           </h2>
-                          <ul className="space-y-2 text-lg text-orange-800">
+                          <ul className="space-y-2 text-lg text-zinc-900">
                             <li>
                               <a
                                 href="https://github.com/remysedlak"
@@ -321,7 +322,7 @@ function App() {
                                 href="https://linkedin.com/in/remysedlak"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-orange-800 hover:underline flex items-center gap-2"
+                                className="text-zinc-900 hover:underline flex items-center gap-2"
                               >
                                 <svg
                                   className="w-5 h-5"
@@ -374,7 +375,7 @@ function App() {
                     </div>
                     
                      <footer className=" text-center mt-4 opacity-50">
-  <p className="hidden md:flex md:justify-center text-sm text-orange-900 font-eb-garamond items-center">
+  <p className="hidden md:flex md:justify-center text-sm text-zinc-900 font-eb-garamond items-center">
     &copy; {new Date().getFullYear()} Remy Sedlak. All rights reserved. Built with TypeScript — and a lot of caffeine ☕.
   </p>
 </footer>
