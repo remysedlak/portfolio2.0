@@ -14,8 +14,8 @@ My journey in tech has been shaped by a drive to make things better, whether tha
 Through my coursework in Java and C, I've gained a deep appreciation for how systems operate at a low level, and I've become especially interested in Unix systems. I enjoy diving into the details, understanding the "why" behind the "how," and applying that knowledge to build better software.`,
     },
     {
-        title: "Life Beyond the Keyboard",
-        text: `Outside of tech, I enjoy producing music, lifting weights, and exploring the outdoors. I believe that balance and curiosity outside of work help fuel creativity and resilience in my projects. I often like to pick up a new book on a part of tech I haven't explored yet, or just to learn something new.
+        title: "Outside the Terminal",
+        text: `Beyond tech, I enjoy writing music, lifting weights, and exploring the outdoors. I believe that balance and curiosity outside of work help fuel creativity and resilience in my projects. I often like to pick up a new book on a part of tech I haven't explored yet, or just to learn something new.
 
 Whether I'm learning something new, collaborating with others, or just enjoying a quiet moment with my cat, Church, I'm always looking for ways to grow and make a positive impact.`,
     },
@@ -63,8 +63,8 @@ const About: React.FC = () => {
                                 key={fact.title}
                                 className={`flex-1 min-w-0 px-2 py-1 rounded-xl font-semibold transition-colors duration-200 ${
                                     selected === idx
-                                        ? "bg-slate-900 text-white shadow text-sm"
-                                        : "bg-white text-slate-900 border hover:bg-slate-100 text-sm"
+                                        ? "bg-slate-900 text-white shadow text-md md:text-lg"
+                                        : "bg-white text-slate-900 border hover:bg-slate-100 text-md md:text-lg"
                                 }`}
                                 style={{ width: "33.3333%" }}
                                 onClick={() => setSelected(idx)}
