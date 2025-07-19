@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 
 const modifyLinks = (htmlString: string) => {
       const parser = new DOMParser();
@@ -15,6 +16,164 @@ const modifyLinks = (htmlString: string) => {
       return doc.body.innerHTML;
    };
 
+const ImageSlideshow = () => {
+  const slides = [
+    {
+      src: "/assets/remysedlak_image.jpg",
+      alt: "image of Remy Sedlak",
+      caption: "Portrait from AEO Day"
+    },
+    {
+      src: "/assets/IMG_2927.png",
+      alt: "image of Remy's cat, Church",
+      caption: "Church pushing a commit"
+    },
+    {
+      src: "/assets/h4h-2025-204-2.jpg",
+      alt: "image of Remy Sedlak at a hackathon",
+      caption: "The Insquisitor, Hacking4Humanity 2025"
+    },
+    {
+      src: "/assets/54413401962_2192bd17d1_c.jpg",
+      alt: "image of Remy Sedlak at a hackathon",
+      caption: "Hacking4Humanity finals in Harrisburg, PA"
+    },
+    {
+      src: "/assets/IMG_2863.png",
+      alt: "image of Remy Sedlak building a computer",
+      caption: "Building my first computer in Middle School"
+    },
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Auto-advance slides
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [isPlaying, slides.length]);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const goToPrevious = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  return (
+    <div className="flex flex-col items-center w-full relative group">
+      {/* Main slideshow container */}
+      <div className="relative max-w-sm h-md overflow-hidden rounded-xl shadow-xl border">
+        {/* Loading spinner */}
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+          </div>
+        )}
+
+        {/* Slides container */}
+        <div 
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className="w-full flex-shrink-0">
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                loading="lazy"
+                onLoad={handleImageLoad}
+                className="w-full h-40 md:h-80 object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+        
+
+        {/* Navigation arrows */}
+        <button
+          onClick={goToPrevious}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/50 hover:bg-slate-900/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          aria-label="Previous image"
+        >
+          <ChevronLeft size={20} />
+        </button>
+
+        <button
+          onClick={goToNext}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/50 hover:bg-slate-900/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          aria-label="Next image"
+        >
+          <ChevronRight size={20} />
+        </button>
+
+        {/* Play/Pause button */}
+        <button
+          onClick={togglePlayPause}
+          className="absolute bottom-2 right-2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
+        >
+          {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+        </button>
+      </div>
+
+      
+
+      {/* Caption */}
+      <div className=" text-center min-h-[3rem] flex items-center">
+        <span className="text-sm text-slate-600 transition-opacity duration-300">
+          {slides[currentSlide].caption}
+        </span>
+      </div>
+
+      {/* Dot indicators */}
+      <div className="flex gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-slate-400 w-3' 
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      
+
+      <style jsx>{`
+        @keyframes slideProgress {
+          0% { width: 0%; }
+          100% { width: 100%; }
+        }
+      `}</style>
+    </div>
+  );
+};
+
 const facts = [
   {
     title: "Builder & Explorer",
@@ -24,7 +183,7 @@ My journey in tech has been shaped by a drive to <b>make things better</b>, whet
   },
   {
     title: "Curious by Nature",
-    text: `At my core, I’m <b>fascinated by how things work</b>: how <b>systems connect</b>, <b>scale</b>, and <b>improve</b>. That curiosity has guided me toward using <b>type-safe languages</b> and <b>interface-driven design</b>, helping me manage <b>complexity</b> and stay in <b>control</b> as my projects grow.
+    text: `At my core, I'm <b>fascinated by how things work</b>: how <b>systems connect</b>, <b>scale</b>, and <b>improve</b>. That curiosity has guided me toward using <b>type-safe languages</b> and <b>interface-driven design</b>, helping me manage <b>complexity</b> and stay in <b>control</b> as my projects grow.
 
 Through my coursework in <b>Java</b> and <b>C</b>, I've gained a deep appreciation for how systems operate at a <b>low level</b>, and I've become especially interested in <b>Unix systems</b>. I enjoy <b>diving into the details</b>, understanding the "<b>why</b>" behind the "<b>how</b>," and applying that knowledge to <b>build better software</b>.`,
   },
@@ -36,7 +195,6 @@ Whether I'm <b>learning something new</b>, <b>collaborating with others</b>, or 
   },
 ];
 
-
 const About: React.FC = () => {
     const [selected, setSelected] = useState(0);
 
@@ -46,27 +204,11 @@ const About: React.FC = () => {
                 So, who am I?
             </h1>
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full max-w-6xl items-center">
-                {/* Images */}
-                <div className="hidden md:flex flex-row md:flex-col items-center md:w-1/3 gap-y-3 gap-x-8">
-                    <div className=" flex flex-col items-center">
-                        <img
-                            src="/assets/remysedlak_image.jpg"
-                            alt="image of Remy Sedlak"
-                            loading="lazy"
-                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
-                        />
-                        <span className="text-sm text-slate-600 mt-1">Portrait from AEO Day</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img
-                            src="/assets/IMG_2927.png"
-                            alt="image of Remy's cat, Church"
-                            loading="lazy"
-                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
-                        />
-                        <span className="text-sm text-slate-600 mt-1">Church pushing a commit</span>
-                    </div>
+                {/* Slideshow - Desktop */}
+                <div className="hidden md:block">
+                    <ImageSlideshow />
                 </div>
+                
                 {/* Interactive Facts */}
                 <div className="flex-1 flex flex-col ">
                     {/* Title for pc */}
@@ -92,31 +234,16 @@ const About: React.FC = () => {
                     </div>
                     <div className="w-full max-w-2xl ">
                         <p data-aos="fade-in-left" data-aos-duration="300" className="text-xl md:text-xl mb-2 bg-white rounded-xl min-h-[330px] 
-                        shadow-xl p-6 transition-all duration-300  whitespace-pre-line"dangerouslySetInnerHTML={{
+                        shadow-xl p-6 transition-all duration-300  whitespace-pre-line" dangerouslySetInnerHTML={{
                                   __html: modifyLinks(facts[selected].text),
                                 }}>
                         </p>
                     </div>
                 </div>
-                <div className="md:hidden flex flex-row md:flex-col items-center md:w-1/3 gap-y-3 gap-x-8">
-                    <div className=" flex flex-col items-center">
-                        <img
-                            src="/assets/remysedlak_image.jpg"
-                            alt="image of Remy Sedlak"
-                            loading="lazy"
-                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
-                        />
-                        <span className="text-sm text-slate-600 mt-1">Portrait from AEO Day</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img
-                            src="/assets/IMG_2927.png"
-                            alt="image of Remy's cat, Church"
-                            loading="lazy"
-                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
-                        />
-                        <span className="text-sm text-slate-600 mt-1">Church pushing a commit</span>
-                    </div>
+                
+                {/* Slideshow - Mobile */}
+                <div className="md:hidden">
+                    <ImageSlideshow />
                 </div>
             </div>
         </div>
