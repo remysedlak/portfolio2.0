@@ -197,7 +197,7 @@ function App() {
                     id="projects"
                     className="py-16 px-4 max-w-4xl mx-auto "
                   >
-                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-950">
+                    <h2 className="text-4xl font-eb-garamond mb-6 text-slate-950">
                       My Projects
                     </h2>
                     <div className="grid gap-8 md:grid-cols-2">
@@ -253,7 +253,7 @@ function App() {
                     id="timeline"
                     className="py-16 px-8 max-w-4xl mx-auto"
                   >
-                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-950">
+                    <h2 className="text-4xl font-eb-garamond mb-6 text-slate-950">
                       Timeline
                     </h2>
                     {/* Vertical timeline line */}
