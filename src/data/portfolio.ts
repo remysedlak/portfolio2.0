@@ -5,6 +5,7 @@ const portfolio = [
         stack: [
             { name: 'python', color: '#B3D3F2', link: 'https://www.python.org/' },
             { name: 'js', color: '#FFD699', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+            { name: 'html5', color: '#FFD699', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
         ],
        repository: 'https://github.com/DSmith215/The-Inquistor',
         desc: 'The Inquisitor is a demo extension that detect\'s <b>deepfake images</b> of politicians to stop <b>misinformation</b> online. User\'s can optimize filters on the module.'

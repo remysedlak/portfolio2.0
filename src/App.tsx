@@ -10,7 +10,7 @@ const modifyLinks = (htmlString: string) => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(htmlString, 'text/html');
       doc.querySelectorAll('b').forEach((b) => {
-         b.classList.add('font-[600]');
+         b.classList.add('font-[450]');
       });
       doc.querySelectorAll('a').forEach((a) => {
          a.classList.add("text-blue-700");
