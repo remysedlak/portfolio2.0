@@ -1,25 +1,41 @@
 import React, { useState } from "react";
 
+const modifyLinks = (htmlString: string) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlString, 'text/html');
+      doc.querySelectorAll('b').forEach((b) => {
+         b.classList.add('font-[450]');
+      });
+      doc.querySelectorAll('a').forEach((a) => {
+         a.classList.add("text-blue-800");
+         a.classList.add("hover:text-blue-500");
+         a.classList.add("underline");
+      });
+      
+      return doc.body.innerHTML;
+   };
+
 const facts = [
-    {
-        title: "Builder & Explorer",
-        text: `I'm Remy Sedlak—a builder, problem-solver, and explorer at heart. I'm passionate about empowering creativity through code, whether that's crafting intuitive user experiences, building robust backend systems, or experimenting with new tools and workflows. I love taking on new challenges and learning from every project I tackle.
+  {
+    title: "Builder & Explorer",
+    text: `I'm Remy Sedlak—a <b>builder</b>, <b>problem-solver</b>, and <b>explorer</b> at heart. I'm passionate about <b>empowering creativity through code</b>, whether that's crafting <b>intuitive user experiences</b>, building <b>robust backend systems</b>, or experimenting with <b>new tools and workflows</b>. I love taking on <b>new challenges</b> and <b>learning from every project</b> I tackle.
 
-My journey in tech has been shaped by a drive to make things better, whether that's optimizing a process, designing a clean interface, or collaborating with others to bring ideas to life.`,
-    },
-    {
-        title: "Curious by Nature",
-        text: `At my core, I’m fascinated by how things work: how systems connect, scale, and improve. That curiosity has guided me toward using type-safe languages and interface-driven design, helping me manage complexity and stay in control as my projects grow.
+My journey in tech has been shaped by a drive to <b>make things better</b>, whether that's <b>optimizing</b> a process, designing a <b>clean interface</b>, or <b>collaborating with others</b> to bring ideas to life.`,
+  },
+  {
+    title: "Curious by Nature",
+    text: `At my core, I’m <b>fascinated by how things work</b>: how <b>systems connect</b>, <b>scale</b>, and <b>improve</b>. That curiosity has guided me toward using <b>type-safe languages</b> and <b>interface-driven design</b>, helping me manage <b>complexity</b> and stay in <b>control</b> as my projects grow.
 
-Through my coursework in Java and C, I've gained a deep appreciation for how systems operate at a low level, and I've become especially interested in Unix systems. I enjoy diving into the details, understanding the "why" behind the "how," and applying that knowledge to build better software.`,
-    },
-    {
-        title: "Outside the Terminal",
-        text: `Beyond tech, I enjoy writing music, lifting weights, and exploring the outdoors. I believe that balance and curiosity outside of work help fuel creativity and resilience in my projects. I often like to pick up a new book on a part of tech I haven't explored yet, or just to learn something new.
+Through my coursework in <b>Java</b> and <b>C</b>, I've gained a deep appreciation for how systems operate at a <b>low level</b>, and I've become especially interested in <b>Unix systems</b>. I enjoy <b>diving into the details</b>, understanding the "<b>why</b>" behind the "<b>how</b>," and applying that knowledge to <b>build better software</b>.`,
+  },
+  {
+    title: "Outside the Terminal",
+    text: `Beyond tech, I enjoy <b>writing music</b>, <b>lifting weights</b>, and <b>exploring the outdoors</b>. I believe that <b>balance</b> and <b>curiosity outside of work</b> help fuel <b>creativity</b> and <b>resilience</b> in my projects. I often like to pick up a <b>new book</b> on a part of tech I haven't explored yet, or just to <b>learn something new</b>.
 
-Whether I'm learning something new, collaborating with others, or just enjoying a quiet moment with my cat, Church, I'm always looking for ways to grow and make a positive impact.`,
-    },
+Whether I'm <b>learning something new</b>, <b>collaborating with others</b>, or just enjoying a <b>quiet moment</b> with my cat, <b>Church</b>, I'm always looking for ways to <b>grow</b> and make a <b>positive impact</b>.`,
+  },
 ];
+
 
 const About: React.FC = () => {
     const [selected, setSelected] = useState(0);
@@ -63,8 +79,8 @@ const About: React.FC = () => {
                                 key={fact.title}
                                 className={`flex-1 min-w-0 px-2 py-1 rounded-xl font-semibold transition-colors duration-200 ${
                                     selected === idx
-                                        ? "bg-slate-900 text-white shadow text-md md:text-lg"
-                                        : "bg-white text-slate-900 cursor-pointer border hover:bg-yellow-100 hover:text-slate-800 text-md md:text-lg"
+                                        ? "bg-slate-900 text-white shadow-md text-md md:text-lg"
+                                        : "bg-white text-slate-900 cursor-pointer border shadow-md  border-slate-900 hover:bg-yellow-50 hover:text-slate-800 text-md md:text-lg"
                                 }`}
                                 style={{ width: "33.3333%" }}
                                 onClick={() => setSelected(idx)}
@@ -75,8 +91,10 @@ const About: React.FC = () => {
                         ))}
                     </div>
                     <div className="w-full max-w-2xl ">
-                        <p data-aos="fade-in-left" data-aos-duration="300" className="text-xl md:text-xl mb-2 bg-white rounded-xl min-h-[330px] shadow-xl p-6 transition-all duration-300  whitespace-pre-line">
-                            {facts[selected].text}
+                        <p data-aos="fade-in-left" data-aos-duration="300" className="text-xl md:text-xl mb-2 bg-white rounded-xl min-h-[330px] 
+                        shadow-xl p-6 transition-all duration-300  whitespace-pre-line"dangerouslySetInnerHTML={{
+                                  __html: modifyLinks(facts[selected].text),
+                                }}>
                         </p>
                     </div>
                 </div>
