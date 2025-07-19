@@ -1,7 +1,7 @@
 const timeline = [
     {
         year: '2025',
-        title: 'Returning @ AGI',
+        title: 'AGI II',
         duration: 'present',
         details: `This summer, I got the opportunity to return to <b>AssetGenie</b> as a developer intern, where I am currently strategizing and implementing <b>database integration</b> between local and cloud ERP systems. More details to come! ` 
     },
@@ -15,14 +15,14 @@ const timeline = [
     },
     {
         year: '2025',
-        title: 'Peer Tutoring',
+        title: 'Tutoring',
         duration: '5 months',
         details: `During my sophomore year, I started providing one-on-one <b>tutoring sessions</b> for <a target="_blank" href="https://courses.sci.pitt.edu/courses"><b>CMPINF and CS courses</b></a> at Pitt, guiding students through fundamental and advanced programming concepts.
         This opportunity has allowed me to strengthen students' <b>problem-solving</b> and debug skills, while I strengthen my own <b>communication</b>.`
     },
     {
         year: '2025',
-        title: 'First Hackathon',
+        title: 'H4H',
         duration: '2 weeks',
         details: `I competed in <a target="_blank" href="https://www.duq.edu/research/centers-and-institutes/grefenstette-center/hacking4humanity.php"><b>Hacking4Humanity 2025</b></a>, a hackathon focused on <b>AI for social good</b>, where I collaborated with a team to develop an AI-powered <b>deepfake detection</b> model.
         The project earned an <b>Honorable Mention</b>, and this experience deepened my passion for <b>AI ethics</b>, adversarial machine learning, and responsible AI development.`
@@ -37,9 +37,9 @@ const timeline = [
     },
     {
         year: '2023',
-        title: 'Undergrad @ Pitt',
+        title: 'Pitt',
         duration: '4 years',
-        details: `Pursuing a <b>B.S. in Computer Science</b> and <b>Digital Narrative and Interactive Design</b> at the <a target="_blank" href="https://www.pitt.edu/"><b>University of Pittsburgh</b></a>, with a focus on the intersection of <b>technology</b> and human behavior.
+        details: `Began my persuit of a <b>B.S. in Computer Science</b> and <b>Digital Narrative and Interactive Design</b> at the <a target="_blank" href="https://www.pitt.edu/"><b>University of Pittsburgh</b></a>, with a focus on the intersection of <b>technology</b> and human behavior.
         Applying <b>interdisciplinary knowledge</b> to real-world projects in AI, UX design, and music technology.`
     },
     {
