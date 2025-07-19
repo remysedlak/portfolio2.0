@@ -236,14 +236,14 @@ function App() {
                           <p className="mb-4 text-gray-700 text-lg" dangerouslySetInnerHTML={{
                                   __html: modifyLinks(project.desc),
                                 }}></p>
-                          <a
+                            <a
                             href={project.repository}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-auto text-orange-600 hover:underline"
-                          >
-                            View on GitHub
-                          </a>
+                            className="mt-auto text-blue-950 w-32 hover:underline cursor-pointer inline"
+                            >
+                            <span className="">View on GitHub</span>
+                            </a>
                         </div>
                       ))}
                     </div>
