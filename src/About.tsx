@@ -245,7 +245,7 @@ const About: React.FC = () => {
                     </div>
                     <div className="w-full max-w-2xl ">
                         <p data-aos="fade-in-left" data-aos-duration="300" className="text-xl md:text-xl mb-2 bg-white rounded-xl min-h-[330px] 
-                        shadow-xl p-6 transition-all duration-300  whitespace-pre-line" dangerouslySetInnerHTML={{
+                        shadow-xl p-4 transition-all duration-300  whitespace-pre-line" dangerouslySetInnerHTML={{
                                   __html: modifyLinks(facts[selected].text),
                                 }}>
                         </p>
