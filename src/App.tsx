@@ -123,10 +123,10 @@ function App() {
               </ul>
             </div>
           )}
-          <h1 className="font-eb-garamond text-3xl text-right ml-auto md:ml-0">
+          <h1 className="font-eb-garamond text-3xl text-right ml-auto md:ml-2">
             Remy Sedlak
           </h1>
-          <ul className="space-x-6  hidden md:flex">
+          <ul className="space-x-6  hidden md:flex mr-2">
             <li>
               <Link
                 to="/"
@@ -164,7 +164,7 @@ function App() {
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-gray-400 text-2xl">
+              <Link to="/about" className="hover:text-gray-400 text-2xl ">
                 About
               </Link>
             </li>
@@ -179,8 +179,8 @@ function App() {
                 <>
                   {/* Hero Section */}
 
-                  <section id="home" className="p-2 px-4 flex flex-col items-center justify-center h-[60vh] bg-slate-800">
-                    <h1 data-aos="zoom-in-down" data-aos-duration="600" className="text-5xl transition-opacity duration-300 ease-in-out md:text-7xl font-eb-garamond text-white mb-4">
+                  <section id="home" className="p-2  px-4 flex flex-col md:items-center  justify-center h-[60vh] bg-slate-800">
+                    <h1 data-aos="zoom-in-down" data-aos-duration="600" className=" text-5xl transition-opacity duration-300 ease-in-out md:text-5xl lg:text-6xl xl:text-7xl font-eb-garamond text-white mb-4">
                       Welcome to my portfolio!
                     </h1>
                     <h3 data-aos="zoom-in-down"  data-aos-duration="600" className="text-2xl font-eb-garamond text-slate-100  mb-4 text-left md:text-center">
