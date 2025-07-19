@@ -214,7 +214,7 @@ const About: React.FC = () => {
             <h1 className="md:hidden text-4xl font-eb-garamond mb-4 text-slate-950 text-left">
                 So, who am I?
             </h1>
-            <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full max-w-6xl items-center">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-16 w-full max-w-6xl items-center">
                 {/* Slideshow - Desktop */}
                 <div className="hidden md:block">
                     <ImageSlideshow />
