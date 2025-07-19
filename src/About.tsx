@@ -26,7 +26,7 @@ const ImageSlideshow = () => {
     {
       src: "/assets/IMG_2927.png",
       alt: "image of Remy's cat, Church",
-      caption: "Church pushing a commit"
+      caption: "My cat, Church, pushing a commit"
     },
     {
       src: "/assets/h4h-2025-204-2.jpg",
