@@ -15,9 +15,9 @@ Through my coursework in Java and C, I've gained a deep appreciation for how sys
     },
     {
         title: "Life Beyond the Keyboard",
-        text: `Outside of tech, I enjoy producing music, lifting weights, and exploring the outdoors. I believe that balance and curiosity outside of work help fuel creativity and resilience in my projects.
+        text: `Outside of tech, I enjoy producing music, lifting weights, and exploring the outdoors. I believe that balance and curiosity outside of work help fuel creativity and resilience in my projects. I often like to pick up a new book on a part of tech I haven't explored yet, or just to learn something new.
 
-Whether I'm learning something new, collaborating with others, or just enjoying a quiet moment with my cat,  Church, I'm always looking for ways to grow and make a positive impact.`,
+Whether I'm learning something new, collaborating with others, or just enjoying a quiet moment with my cat, Church, I'm always looking for ways to grow and make a positive impact.`,
     },
 ];
 
