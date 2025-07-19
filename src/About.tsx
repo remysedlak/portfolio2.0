@@ -233,9 +233,9 @@ const About: React.FC = () => {
                                 className={`flex-1 min-w-0 px-2 py-1 rounded-xl font-semibold transition-colors duration-200 ${
                                     selected === idx
                                         ? "bg-slate-900 text-white shadow-md text-md md:text-lg"
-                                        : "bg-white text-slate-900 cursor-pointer border shadow-md  border-slate-700 hover:bg-yellow-50 hover:text-slate-800 text-md md:text-lg"
+                                        : "bg-white text-slate-900 cursor-pointer border shadow-md  border-slate-500 hover:bg-yellow-50 hover:text-slate-800 text-md md:text-lg"
                                 }`}
-                                style={{ width: "33.3333%" }}
+                                style={{ width: "33.3333%", borderWidth: '0.25px' }}
                                 onClick={() => setSelected(idx)}
                                 aria-pressed={selected === idx}
                             >
