@@ -64,7 +64,7 @@ const About: React.FC = () => {
                                 className={`flex-1 min-w-0 px-2 py-1 rounded-xl font-semibold transition-colors duration-200 ${
                                     selected === idx
                                         ? "bg-slate-900 text-white shadow text-sm"
-                                        : "bg-white text-slate-900 border hover:bg-slate-100"
+                                        : "bg-white text-slate-900 border hover:bg-slate-100 text-sm"
                                 }`}
                                 style={{ width: "33.3333%" }}
                                 onClick={() => setSelected(idx)}
