@@ -291,14 +291,14 @@ function App() {
                   </section>
 
                   {/* Links Section */}
-                  <section id="links" className="py-8 md:pt-8 md:pb-2 px-4 bg-yellow-100 relative">
+                  <section id="links" className="pt-8 pb-2 px-4 bg-yellow-100 relative">
                     <div className="md:ml-32 ml-8">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div>
-                          <h2 className="text-3xl font-eb-garamond mb-6 text-zinc-900">
+                          <h2 className="text-3xl font-eb-garamond mb-6 text-zinc-800">
                             Links
                           </h2>
-                          <ul className="space-y-2 text-lg text-zinc-900">
+                          <ul className="space-y-2 text-lg text-zinc-700">
                             <li>
                               <a
                                 href="https://github.com/remysedlak"
@@ -322,7 +322,7 @@ function App() {
                                 href="https://linkedin.com/in/remysedlak"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-zinc-900 hover:underline flex items-center gap-2"
+                                className="hover:underline flex items-center gap-2"
                               >
                                 <svg
                                   className="w-5 h-5"
@@ -332,21 +332,6 @@ function App() {
                                   <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76 0-.97.78-1.76 1.75-1.76s1.75.79 1.75 1.76c0 .97-.78 1.76-1.75 1.76zm15.25 12.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-11h2.89v1.5h.04c.4-.75 1.37-1.54 2.82-1.54 3.02 0 3.58 1.99 3.58 4.58v6.46z" />
                                 </svg>
                                 LinkedIn
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="mailto:remysedlak@gmail.com"
-                                className="hover:underline flex items-center gap-2"
-                              >
-                                <svg
-                                  className="w-5 h-5"
-                                  fill="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z" />
-                                </svg>
-                                remysedlak@gmail.com
                               </a>
                             </li>
                             <li>
@@ -366,6 +351,22 @@ function App() {
                   Resume
                 </a>
             </li>
+                            <li>
+                              <a
+                                href="mailto:remysedlak@gmail.com"
+                                className="hover:underline flex items-center gap-2"
+                              >
+                                <svg
+                                  className="w-5 h-5"
+                                  fill="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z" />
+                                </svg>
+                                remysedlak@gmail.com
+                              </a>
+                            </li>
+                            
                           </ul>
                         </div>
                         
@@ -374,8 +375,8 @@ function App() {
                       
                     </div>
                     
-                     <footer className=" text-center mt-4 opacity-50">
-  <p className="hidden md:flex md:justify-center text-sm text-zinc-900 font-eb-garamond items-center">
+                     <footer className=" text-center mt-4 opacity-40">
+  <p className="hidden md:flex md:justify-center text-xs  text-zinc-900 font-eb-garamond items-center">
     &copy; {new Date().getFullYear()} Remy Sedlak. All rights reserved. Built with TypeScript — and a lot of caffeine ☕.
   </p>
 </footer>
