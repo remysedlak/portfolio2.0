@@ -1,7 +1,7 @@
 const timeline = [
     {
         year: '2025',
-        title: 'AGI II',
+        title: 'Return @ AGI',
         duration: 'present',
         details: `This summer, I got the opportunity to return to <b>AssetGenie</b> as a developer intern, where I am currently strategizing and implementing <b>database integration</b> between local and cloud ERP systems. More details to come! ` 
     },

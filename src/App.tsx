@@ -13,7 +13,7 @@ const modifyLinks = (htmlString: string) => {
          b.classList.add('font-[450]');
       });
       doc.querySelectorAll('a').forEach((a) => {
-         a.classList.add("text-blue-700");
+         a.classList.add("text-blue-800");
          a.classList.add("hover:text-blue-500");
          a.classList.add("underline");
       });
@@ -197,7 +197,7 @@ function App() {
                     id="projects"
                     className="py-16 px-4 max-w-4xl mx-auto "
                   >
-                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-900">
+                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-950">
                       My Projects
                     </h2>
                     <div className="grid gap-8 md:grid-cols-2">
@@ -253,7 +253,7 @@ function App() {
                     id="timeline"
                     className="py-16 px-8 max-w-4xl mx-auto"
                   >
-                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-900">
+                    <h2 className="text-3xl font-eb-garamond mb-6 text-slate-950">
                       Timeline
                     </h2>
                     {/* Vertical timeline line */}
@@ -267,13 +267,13 @@ function App() {
                             <span className="absolute -left-1.75 mt-2 w-4 h-4 bg-slate-100 rounded-full border-2 border-black shadow"></span>
                             <div className="ml-6 bg-white rounded-lg p-4 shadow-lg">
                               <div className="flex items-baseline gap-4 border-b ">
-                                <span className="text-lg font-semibold text-gray-600">
+                                <span className="text-lg font-medium text-gray-600">
                                   {entry.year}
                                 </span>
-                                <span className="text-xl font-eb-garamond font-semibold  ">
+                                <span className="text-xl font-eb-garamond text-slate-800 font-semibold  ">
                                   {entry.title}
                                 </span>
-                                <span className="ml-auto text-md  text-gray-500">
+                                <span className="ml-auto text-md font-light  text-gray-500">
                                   {entry.duration}
                                 </span>
                               </div>
@@ -291,14 +291,14 @@ function App() {
                   </section>
 
                   {/* Links Section */}
-                  <section id="links" className="pt-8 pb-2 px-4 bg-yellow-100 relative">
+                  <section id="links" className="pt-8 pb-2 px-4 bg-yellow-50 relative">
                     <div className="md:ml-32 ml-8">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div>
                           <h2 className="text-3xl font-eb-garamond mb-4 text-zinc-800">
                             Links
                           </h2>
-                          <ul className="space-y-2 text-lg text-zinc-700">
+                          <ul className="space-y-2 text-lg text-zinc-800">
                             <li>
                               <a
                                 href="https://github.com/remysedlak"
