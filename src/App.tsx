@@ -295,7 +295,7 @@ function App() {
                     <div className="md:ml-32 ml-8">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div>
-                          <h2 className="text-3xl font-eb-garamond mb-6 text-zinc-800">
+                          <h2 className="text-3xl font-eb-garamond mb-4 text-zinc-800">
                             Links
                           </h2>
                           <ul className="space-y-2 text-lg text-zinc-700">
