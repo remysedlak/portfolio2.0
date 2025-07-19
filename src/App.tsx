@@ -71,11 +71,11 @@ function App() {
           {showNav && (
             <div className="fixed inset-0 bg-slate-800 bg-opacity-60 z-50 flex flex-col">
               <button
-                className="self-end m-4 p-2"
+                className="self-end m-2 p-2"
                 onClick={() => setShowNav(false)}
                 aria-label="Close navigation menu"
               >
-                <span className="text-white text-3xl">&times;</span>
+                <span className="text-white text-4xl">&times;</span>
               </button>
               <ul className="flex flex-col items-center justify-center flex-1 space-y-8 text-white text-3xl font-eb-garamond">
                 <li>
