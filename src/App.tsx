@@ -264,7 +264,7 @@ function App() {
                         {timeline.map((entry, idx) => (
                           <li key={idx} className="relative flex items-start ">
                             {/* Dot */}
-                            <span className="absolute -left-1.75 mt-2 w-4 h-4 bg-slate-100 rounded-full border-2 border-black shadow"></span>
+                            <span className="absolute -left-1.75 mt-2 w-4 h-4 bg-slate-200 rounded-full border-2 border-black shadow"></span>
                             <div className="ml-6 bg-white rounded-lg p-4 shadow-lg">
                               <div className="flex items-baseline gap-4 border-b ">
                                 <span className="text-lg font-medium text-gray-600">
