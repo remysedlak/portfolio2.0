@@ -18,8 +18,8 @@ const modifyLinks = (htmlString: string) => {
 
 const ImageSlideshow = () => {
   const slides = [
-    {
-      src: "/assets/remysedlak_image.jpg",
+     {
+      src: "/assets/IMG_2929.jpg",
       alt: "image of Remy Sedlak",
       caption: "Portrait from AEO Day"
     },
@@ -41,7 +41,7 @@ const ImageSlideshow = () => {
     {
       src: "/assets/IMG_2863.png",
       alt: "image of Remy Sedlak building a computer",
-      caption: "Building my first computer in Middle School"
+      caption: "Building my first computer in middle school"
     },
   ];
 
@@ -103,7 +103,7 @@ const ImageSlideshow = () => {
                 alt={slide.alt}
                 loading="lazy"
                 onLoad={handleImageLoad}
-                className="w-full h-60 md:h-80 object-cover transition-transform duration-300 hover:scale-105"
+                className="w-full h-60 md:h-84 object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}
