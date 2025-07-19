@@ -155,7 +155,7 @@ const ImageSlideshow = () => {
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? 'bg-blue-500 w-3' 
+                ? 'bg-slate-500 w-3' 
                 : 'bg-gray-300 hover:bg-gray-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -164,9 +164,9 @@ const ImageSlideshow = () => {
       </div>
 
       {isPlaying && (
-        <div className="w-full mb-4  max-w-sm mt-4 h-1 bg-gray-200 rounded-full overflow-hidden ">
+        <div className="w-full mb-4  max-w-sm mt-4 h-1 bg-gray-200 rounded-full overflow-hidden opacity-30">
           <div 
-            className="h-full bg-blue-500 rounded-full transition-all duration-100 ease-linear"
+            className="h-full bg-slate-500 rounded-full transition-all duration-100 ease-linear"
             style={{
               animation: 'slideProgress 8s linear infinite',
               animationPlayState: isPlaying ? 'running' : 'paused'
