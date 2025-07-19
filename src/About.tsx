@@ -25,43 +25,48 @@ const About: React.FC = () => {
     const [selected, setSelected] = useState(0);
 
     return (
-        <div className="md:mx-25 mx-2 flex flex-col items-center justify-center md:mt-8 mt-4 m-2">
-            <h1 className="text-3xl  font-eb-garamond mb-4 text-slate-950 text-center">
+        <div className="md:mx-25 mx-2 flex flex-col items-center justify-center md:mt-8 mt-4 m-2 ">
+            <h1 className="md:hidden text-4xl font-eb-garamond mb-4 text-slate-950 text-left">
                 So, who am I?
             </h1>
-            <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl items-center">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full max-w-6xl items-center">
                 {/* Images */}
-                <div className="flex flex-row md:flex-col items-center md:w-1/3 gap-y-3 gap-x-8">
-                    <div className="flex flex-col items-center">
+                <div className="hidden md:flex flex-row md:flex-col items-center md:w-1/3 gap-y-3 gap-x-8">
+                    <div className=" flex flex-col items-center">
                         <img
                             src="/assets/remysedlak_image.jpg"
                             alt="image of Remy Sedlak"
                             loading="lazy"
-                            className="rounded-xl shadow-xl border w-42 h-40 md:w-48 md:h-42 object-cover transition-transform duration-300 hover:scale-105"
+                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
                         />
-                        <span className="text-sm text-slate-600 mt-1">Portrait from AEO</span>
+                        <span className="text-sm text-slate-600 mt-1">Portrait from AEO Day</span>
                     </div>
                     <div className="flex flex-col items-center">
                         <img
                             src="/assets/IMG_2927.png"
                             alt="image of Remy's cat, Church"
                             loading="lazy"
-                            className="rounded-xl shadow-xl border w-42 h-40 md:w-50 md:h-40 object-cover transition-transform duration-300 hover:scale-105"
+                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
                         />
-                        <span className="text-sm text-slate-600 mt-1">Church's Merge Request</span>
+                        <span className="text-sm text-slate-600 mt-1">Church pushing a commit</span>
                     </div>
                 </div>
                 {/* Interactive Facts */}
-                <div className="flex-1 flex flex-col items-center">
-                    <div className="flex gap-2 mb-4 flex-wrap">
+                <div className="flex-1 flex flex-col ">
+                    {/* Title for pc */}
+                     <h1 data-aos="zoom-in-left" data-aos-duration="300" className="hidden md:block text-4xl font-eb-garamond mb-4 text-slate-950 text-left">
+                So, who am I?
+            </h1>
+                    <div data-aos="fade-in-left" data-aos-duration="300" className="flex gap-2 mb-4 flex-wrap ">
                         {facts.map((fact, idx) => (
                             <button
                                 key={fact.title}
-                                className={`px-4 py-2 rounded-xl font-semibold transition-colors duration-200 ${
+                                className={`flex-1 min-w-0 px-2 py-1 rounded-xl font-semibold transition-colors duration-200 ${
                                     selected === idx
-                                        ? "bg-slate-900 text-white shadow"
+                                        ? "bg-slate-900 text-white shadow text-sm"
                                         : "bg-white text-slate-900 border hover:bg-slate-100"
                                 }`}
+                                style={{ width: "33.3333%" }}
                                 onClick={() => setSelected(idx)}
                                 aria-pressed={selected === idx}
                             >
@@ -69,10 +74,30 @@ const About: React.FC = () => {
                             </button>
                         ))}
                     </div>
-                    <div className="w-full max-w-2xl">
-                        <p className="text-xl md:text-xl mb-2 bg-white rounded-xl shadow-xl p-6 transition-all duration-300 min-h-[120px] whitespace-pre-line">
+                    <div className="w-full max-w-2xl ">
+                        <p data-aos="fade-in-left" data-aos-duration="300" className="text-xl md:text-xl mb-2 bg-white rounded-xl min-h-[330px] shadow-xl p-6 transition-all duration-300  whitespace-pre-line">
                             {facts[selected].text}
                         </p>
+                    </div>
+                </div>
+                <div className="md:hidden flex flex-row md:flex-col items-center md:w-1/3 gap-y-3 gap-x-8">
+                    <div className=" flex flex-col items-center">
+                        <img
+                            src="/assets/remysedlak_image.jpg"
+                            alt="image of Remy Sedlak"
+                            loading="lazy"
+                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                        <span className="text-sm text-slate-600 mt-1">Portrait from AEO Day</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img
+                            src="/assets/IMG_2927.png"
+                            alt="image of Remy's cat, Church"
+                            loading="lazy"
+                            className="rounded-xl shadow-xl border w-42 h-40 md:w-54 md:h-46 object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                        <span className="text-sm text-slate-600 mt-1">Church pushing a commit</span>
                     </div>
                 </div>
             </div>
